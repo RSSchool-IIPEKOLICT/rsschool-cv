@@ -1,2 +1,1 @@
-# rsschool-cv
-my cv
+https://iipekolict.github.io/rsschool-cv/cv
