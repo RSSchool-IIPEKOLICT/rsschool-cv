@@ -71,7 +71,9 @@ def alphabet_war(fight):
 - [Doors shop landing page (HTML + SCSS)](https://iipekolict.github.io/yap/maket/)
 
 ### Education
-BSUIR, IIT
+- **BSUIR, IIT**
+    
+    _Speciality "Program mobile systems"_
 
 ### English knowledge level
 My english knowledge level is A2 (Pre-Intermediate)
