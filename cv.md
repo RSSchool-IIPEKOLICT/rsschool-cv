@@ -2,6 +2,7 @@
 ```
 E-mail: iipekolict@gmail.com
 Telegram: @IIPEKOLICT
+GitHub: https://github.com/IIPEKOLICT
 ```
 
 ### About me
