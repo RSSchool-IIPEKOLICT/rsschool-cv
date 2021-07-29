@@ -63,6 +63,12 @@ def alphabet_war(fight):
 
 ### Work experience
 
+#### Freelance _(Minsk, Belarus)_ 
+- [Todos app on Express](https://github.com/IIPEKOLICT/todos-express)
+- [Python console app for school](https://github.com/IIPEKOLICT/school)
+- [Python console app for bowling club](https://github.com/IIPEKOLICT/bowling)
+- [Doors shop landing page (HTML + SCSS)](https://iipekolict.github.io/yap/maket/)
+
 ### Education
 BSUIR, IIT
 
