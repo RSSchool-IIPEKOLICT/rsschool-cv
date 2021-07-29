@@ -32,6 +32,12 @@ Development tools:
 
 ### Code examples
 
+Hello world (pug):
+```pug
+div.container
+    p.text Hello world
+```
+
 Euclidean distance in n dimensions (js):
 ```javascript
 function euclideanDistance(point1, point2) {
