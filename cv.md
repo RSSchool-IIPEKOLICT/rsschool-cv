@@ -31,6 +31,36 @@ Development tools:
 
 ### Code examples
 
+Euclidean distance in n dimensions (js):
+```javascript
+function euclideanDistance(point1, point2) {
+  let rez = 0
+  for (let i = 0; i < point1.length; i++) rez += Math.pow(Math.abs(point1[i] - point2[i]), 2)
+  return Number(Math.sqrt(rez).toFixed(2))
+}
+```
+
+Alphabet wars (python):
+```python
+def alphabet_war(fight):
+    left = right = 0
+    left_score = {'w': 4, 'p': 3, 'b': 2, 's': 1}
+    right_score = {'m': 4, 'q': 3, 'd': 2, 'z': 1}
+    
+    for letter in fight:
+        if letter in left_score:
+            left += left_score[letter]
+        elif letter in right_score:
+            right += right_score[letter]
+    
+    if left > right:
+        return 'Left side wins!'
+    elif left < right:
+        return 'Right side wins!'
+    else:
+        return "Let's fight again!"
+```
+
 ### Work experience
 
 ### Education
