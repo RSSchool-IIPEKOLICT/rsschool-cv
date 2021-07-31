@@ -3,6 +3,8 @@ html {
   padding: 0;
   width: 1000px;
   background-color: black;
+  color: white;
+  font-family: Arial, serif;
 }
 @media (max-width: 1000px) {
   html {
@@ -17,7 +19,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #42a5f6;
+  color: #eb0028;
   text-transform: uppercase;
 }
 
@@ -42,8 +44,40 @@ header img {
   border-radius: 50%;
 }
 
+article section p:first-letter {
+  color: #eb0028;
+}
 section:not(:last-child) {
-  border: 1px solid #474747;
+  border-bottom: 1px solid #474747;
+}
+
+main {
+  display: flex;
+}
+main article {
+  padding-right: 20px;
+  flex: 70%;
+}
+main article a {
+  color: #eb0028;
+  text-decoration: none;
+}
+main article a:hover {
+  text-decoration: underline;
+}
+main aside {
+  padding-left: 20px;
+  flex: 30%;
+}
+main aside ul {
+  margin: 1em;
+  padding-left: 20px;
+}
+main aside ul li {
+  transition: 0.3s ease-out;
+}
+main aside ul li:hover {
+  color: #eb0028;
 }
 
 .contacts {
@@ -66,7 +100,7 @@ section:not(:last-child) {
   margin-left: 0;
 }
 .contacts li:hover {
-  background-color: #42a5f6;
+  background-color: #eb0028;
 }
 .contacts li a {
   position: absolute;

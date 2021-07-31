@@ -1,5 +1,5 @@
 $primary: #212121;
-$accent: #42a5f6;
+$accent: rgb(235,0,40); //#42a5f6
 $hover: rgba(255,255,255,.2);
 $divider: #474747;
 $base: 5px;
@@ -11,6 +11,8 @@ html {
   padding: 0;
   width: $base * 200;
   background-color: black;
+  color: white;
+  font-family: Arial, serif;
   
   @media (max-width: $base * 200) {
     width: 100%;
@@ -52,8 +54,48 @@ header {
 }
 
 section {
+  article & p:first-letter {
+    color: $accent;
+  }
+  
   &:not(:last-child) {
-    border: 1px solid $divider;
+    border-bottom: 1px solid $divider;
+  }
+}
+
+main {
+  display: flex;
+  
+  article {
+    padding-right: $br;
+    flex: 70%;
+    
+    a {
+      color: $accent;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  aside {
+    padding-left: $br;
+    flex: 30%;
+    
+    ul {
+      margin: 1em;
+      padding-left: $br;
+      
+      & li {
+        transition: $tr;
+        
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
   }
 }
 
