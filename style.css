@@ -1,0 +1,83 @@
+html {
+  margin: 0 auto;
+  padding: 0;
+  width: 1000px;
+  background-color: black;
+}
+@media (max-width: 1000px) {
+  html {
+    width: 100%;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: #212121;
+  border-radius: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #42a5f6;
+  text-transform: uppercase;
+}
+
+header, main, footer {
+  padding: 20px;
+}
+
+header {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header article {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+header img {
+  width: 150px;
+  height: inherit;
+  border-radius: 50%;
+}
+
+section:not(:last-child) {
+  border: 1px solid #474747;
+}
+
+.contacts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.contacts li {
+  margin: 1em;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background-color: #474747;
+  border-radius: 50%;
+  transition: 0.3s ease-out;
+}
+.contacts li:first-child {
+  margin-left: 0;
+}
+.contacts li:hover {
+  background-color: #42a5f6;
+}
+.contacts li a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */
