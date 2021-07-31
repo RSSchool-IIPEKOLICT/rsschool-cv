@@ -21,8 +21,6 @@ html {
 
 body {
   margin: 0;
-  background-color: $primary;
-  border-radius: $br;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -30,8 +28,14 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+header, main {
+  margin-bottom: 1em;
+}
+
 header, main, footer {
   padding: $br;
+  background-color: $primary;
+  border-radius: $br;
 }
 
 header {
@@ -39,11 +43,28 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+  @media (max-width: 460px) {
+    height: auto;
+    flex-direction: column;
+  }
 
   article {
     width: 70%;
     display: flex;
     flex-direction: column;
+  
+    @media (max-width: 460px) {
+      width: 100%;
+      
+      .contacts {
+        justify-content: center;
+        
+        li:first-child {
+          margin-left: 1em;
+        }
+      }
+    }
   }
   
   img {
@@ -95,6 +116,19 @@ main {
           color: $accent;
         }
       }
+    }
+  }
+  
+  @media (max-width: 460px) {
+    flex-direction: column;
+    
+    article {
+      padding-right: 0;
+      border-bottom: 1px solid $divider;
+    }
+    
+    aside {
+      padding-left: 0;
     }
   }
 }

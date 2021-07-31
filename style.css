@@ -14,8 +14,6 @@ html {
 
 body {
   margin: 0;
-  background-color: #212121;
-  border-radius: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -23,8 +21,14 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+header, main {
+  margin-bottom: 1em;
+}
+
 header, main, footer {
   padding: 20px;
+  background-color: #212121;
+  border-radius: 20px;
 }
 
 header {
@@ -33,10 +37,27 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 460px) {
+  header {
+    height: auto;
+    flex-direction: column;
+  }
+}
 header article {
   width: 70%;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 460px) {
+  header article {
+    width: 100%;
+  }
+  header article .contacts {
+    justify-content: center;
+  }
+  header article .contacts li:first-child {
+    margin-left: 1em;
+  }
 }
 header img {
   width: 150px;
@@ -78,6 +99,18 @@ main aside ul li {
 }
 main aside ul li:hover {
   color: #eb0028;
+}
+@media (max-width: 460px) {
+  main {
+    flex-direction: column;
+  }
+  main article {
+    padding-right: 0;
+    border-bottom: 1px solid #474747;
+  }
+  main aside {
+    padding-left: 0;
+  }
 }
 
 .contacts {
