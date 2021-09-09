@@ -1,0 +1,41 @@
+@import '../vars';
+
+.Section {
+    border-bottom: 2px solid rgba(255,255,255,.3);
+
+    &:hover {
+        h3::after {
+            background-color: $accent;
+        }
+    }
+
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    h3 {
+        padding: $bp / 2 0;
+        position: relative;
+
+        &::after {
+            content: '';
+            bottom: 0;
+            height: 1px;
+            width: 100%;
+            display: block;
+            position: absolute;
+            background-color: transparent;
+            transition: $trans;
+        }
+    }
+
+    p:first-letter {
+        color: $accent;
+    }
+}
+
+pre code.hljs {
+    border-radius: $br;
+    background-color: rgba(255,255,255,.5);
+    font-size: .75em;
+}

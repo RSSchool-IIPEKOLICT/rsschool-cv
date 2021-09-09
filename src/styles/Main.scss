@@ -1,0 +1,18 @@
+@import '../vars';
+
+.Main {
+    display: flex;
+
+    &__article,
+    &__aside {
+        padding: $bp;
+    }
+
+    &__article {
+        flex-basis: 70%;
+    }
+
+    &__aside {
+        flex-basis: 30%;
+    }
+}

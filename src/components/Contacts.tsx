@@ -1,0 +1,12 @@
+import React from 'react'
+import {contacts} from "../content.json";
+import '../styles/Contacts.scss'
+import {ContactProps} from '../interfaces/props'
+
+export const Contacts: React.FC<ContactProps> = (props) => {
+    return (
+        <ul className='Contacts'>
+            {contacts.map(contact => <li><a href={contact} key={props.prefix + contact}/></li> )}
+        </ul>
+    )
+}
