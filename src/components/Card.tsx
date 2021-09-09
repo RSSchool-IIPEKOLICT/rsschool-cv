@@ -5,7 +5,7 @@ import '../styles/Card.scss'
 export const Card: React.FC<CardProps> = (props) => {
     return (
         <figure className='Card'>
-            <a href={props.href.toString()} target='_blank'>
+            <a href={props.href.toString()} target='_blank' rel='noreferrer'>
                 <h4>{props.title}</h4>
                 <div className='Card__container'>
                     <div>
