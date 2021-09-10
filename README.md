@@ -5,5 +5,4 @@ https://iipekolict.github.io/rsschool-cv/cv
 https://iipekolict.github.io/rsschool-cv/
 
 ### CV:
-https://iipekolict-cv.netlify.app/
-(netlify is because it's React app)
+https://iipekolict-cv.netlify.app/ (netlify is because it's React app)

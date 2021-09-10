@@ -17,6 +17,13 @@ $contacts_size: 5em;
         border-radius: 50%;
         transition: $trans;
 
+        @media (max-width: 600px) {
+            margin: 0 $contacts_size / 4;
+            width: $contacts_size / 2;
+            height: $contacts_size / 2;
+            background-size: $contacts_size / 2 $contacts_size / 2;
+        }
+
         &:hover {
             background-color: $accent;
             transform: scale(.8);

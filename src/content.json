@@ -1,10 +1,10 @@
 {
     "name": "Evgenii Shcherbakov",
-    "sections": ["about", "skills", "examples", "projects", "education", "english"],
+    "sections": ["about", "examples", "projects", "skills", "education", "english"],
     "contacts": ["mailto:iipekolict@gmail.com", "https://t.me/IIPEKOLICT", "https://github.com/IIPEKOLICT"],
     "skills": [
         "HTML, CSS, SCSS, Stylus, Pug",
-        "JS, JQuery, Node, React",
+        "JS, JQuery, Node, React, TypeScript",
         "Python",
         "Android development (Java, Kotlin)",
         "DB (MongoDB)"
@@ -15,11 +15,18 @@
     ],
     "projects": [
         {
+            "title": "My CV",
+            "href": "https://github.com/IIPEKOLICT/rsschool-cv/tree/cv-html-css",
+            "desc": "Yes, this is what you are looking at right now, lol",
+            "technologies": "React, TypeScript",
+            "date": "2021/09"
+        },
+        {
             "title": "Quiz app for Android",
             "href": "https://github.com/IIPEKOLICT/quiz",
             "desc": "Task on subject RPOS in BSUIR",
             "technologies": "Kotlin, Gradle",
-            "date": "2021/08 - 2021/09"
+            "date": "2021/07 - 2021/09"
         },
         {
             "title": "Todo app on Express",
@@ -31,7 +38,7 @@
         {
             "title": "School console app on Python",
             "href": "https://github.com/IIPEKOLICT/school",
-            "desc": "Task on subject TP in BSUIR",
+            "desc": "Task on subject PT in BSUIR",
             "technologies": "Python",
             "date": "2021/05"
         }

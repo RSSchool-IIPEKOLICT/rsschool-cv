@@ -8,6 +8,19 @@
         padding: $bp;
     }
 
+    @media (max-width: 800px) {
+        flex-direction: column;
+
+        &__article,
+        &__aside {
+            padding: 0 $bp;
+        }
+
+        &__article .Section:last-child {
+            border-bottom: 1px solid rgba(255,255,255,.3);
+        }
+    }
+
     &__article {
         flex-basis: 70%;
     }

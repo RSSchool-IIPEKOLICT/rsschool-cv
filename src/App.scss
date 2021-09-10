@@ -8,6 +8,11 @@
     box-shadow: 0 0 10px rgba(255,255,255,.75);
     transition: $trans;
     scroll-behavior: smooth;
+
+    @media (max-width: 1032px) {
+        margin: $bp;
+        width: auto;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
