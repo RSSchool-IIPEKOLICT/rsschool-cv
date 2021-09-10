@@ -37,6 +37,11 @@
             height: 65vh;
             border-radius: 0;
             background-image: url('../img/stalin.png');
+
+            @media (max-width: 800px) {
+                width: 65vw;
+                height: 65vw;
+            }
         }
     }
 
