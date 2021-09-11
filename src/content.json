@@ -16,7 +16,7 @@
     "projects": [
         {
             "title": "My CV",
-            "href": "https://github.com/IIPEKOLICT/rsschool-cv/tree/cv-html-css",
+            "href": "https://github.com/IIPEKOLICT/rsschool-cv/tree/netlify",
             "desc": "Yes, this is what you are looking at right now, lol",
             "technologies": "React, TypeScript",
             "date": "2021/09"
@@ -30,7 +30,7 @@
         },
         {
             "title": "Todo app on Express",
-            "href": "https://github.com/IIPEKOLICT/todos-express",
+            "href": "https://iipekolict-todos-express.herokuapp.com",
             "desc": "Todo backend app on Express",
             "technologies": "Pug, Stylus, Node, Express",
             "date": "2021/07"
