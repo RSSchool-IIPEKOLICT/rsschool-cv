@@ -65,11 +65,6 @@ h1, h3, h4)
 GitHub Pages, выполнена самооценка (самооценку расписываем по пунктам критериев оценки, указывая балл за каждый 
 пункт): +10
 
-/*
-не GitHub Pages потому и только потому, что я не знаю способа на GP задеплоить React-приложение (а это именно оно). 
-Именно поэтому Netlify, ведь там возможно сие быстро и просто сделать (так, уточнение для любителей докопаться)
-/*
-
 - есть видеорезюме автора CV на английском языке. Продолжительность видео 3-5 минут (±15 секунд). В описание 
 видео на YouTube добавлена его транскрипция на английском языке: 0
 
@@ -87,6 +82,6 @@ GitHub Pages, выполнена самооценка (самооценку ра
 
 
 Ссылка на исходный код: https://github.com/IIPEKOLICT/rsschool-cv/tree/cv-html-css
-Ссылка на репозиторий: https://github.com/IIPEKOLICT/rsschool-cv/
-Ссылка на Pull Request: https://github.com/IIPEKOLICT/rsschool-cv/
+Ссылка на репозиторий: https://github.com/IIPEKOLICT/rsschool-cv
+Ссылка на Pull Request: https://github.com/IIPEKOLICT/rsschool-cv/pull/6
 `)
