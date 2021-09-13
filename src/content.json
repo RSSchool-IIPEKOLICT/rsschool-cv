@@ -3,15 +3,17 @@
     "sections": ["about", "examples", "projects", "skills", "education", "english"],
     "contacts": ["mailto:iipekolict@gmail.com", "https://t.me/IIPEKOLICT", "https://github.com/IIPEKOLICT"],
     "skills": [
-        "HTML, CSS, SCSS, Stylus, Pug",
-        "JS, JQuery, Node, React, TypeScript",
+        "HTML, Pug",
+        "CSS, SCSS, Stylus",
+        "JS, JQuery, Node, Express",
+        "React, TypeScript",
         "Python",
         "Android development (Java, Kotlin)",
-        "DB (MongoDB)"
+        "MongoDB"
     ],
     "education": [
-        "MRC, Minsk (2015 - 2019)",
-        "IIT BSUIR, Minsk (2019 - 2022)"
+        "Minsk Radio Engineering College, Minsk (2015 - 2019)",
+        "Belarusian State University of Informatics and Radioelectronics, Minsk (2019 - 2022)"
     ],
     "projects": [
         {

@@ -1,8 +1,7 @@
 {
   "name": "rsschool-cv",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "homepage": "https://iipekolict.github.io/rsschool-cv",
   "dependencies": {
     "@types/jest": "^26.0.24",
     "@types/node": "^12.20.24",

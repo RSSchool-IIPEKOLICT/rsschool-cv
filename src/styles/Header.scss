@@ -1,10 +1,41 @@
-@import '../vars';
+@import 'vars';
 
 .Header {
     padding: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &__btn {
+        margin-bottom: 30px;
+        padding: 1em;
+        background-color: transparent;
+        color: white;
+        border: 2px solid $accent;
+        border-radius: $br;
+        cursor: pointer;
+        opacity: .8;
+        transition: $trans;
+
+        .light & {
+            color: black;
+        }
+
+        &:hover {
+            background-color: rgba(255,0,0,.3);
+            opacity: 1;
+        }
+
+        &::before {
+            content: 'Light mode';
+            text-transform: uppercase;
+            transition: inherit;
+
+            .light & {
+                content: 'Dark mode';
+            }
+        }
+    }
 
     &__img {
         width: 200px;

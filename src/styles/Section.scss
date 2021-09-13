@@ -1,4 +1,4 @@
-@import '../vars';
+@import 'vars';
 
 .Section {
     border-bottom: 1px solid rgba(255,255,255,.3);
@@ -38,6 +38,10 @@ pre code.hljs {
     filter: invert(1);
     border-radius: $br;
     font-size: .85em;
+
+    .light & {
+        filter: invert(0);
+    }
 
     @media (max-width: 600px) {
         font-size: .6em;
