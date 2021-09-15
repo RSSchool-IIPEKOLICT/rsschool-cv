@@ -38,6 +38,7 @@ pre code.hljs {
     filter: invert(1);
     border-radius: $br;
     font-size: .85em;
+    transition: $trans;
 
     .light & {
         filter: invert(0);

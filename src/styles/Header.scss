@@ -7,7 +7,7 @@
     align-items: center;
 
     &__btn {
-        margin-bottom: 30px;
+        margin: 30px 0;
         padding: 1em;
         background-color: transparent;
         color: white;
@@ -41,7 +41,6 @@
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        cursor: crosshair;
         transition: $trans;
 
         &:hover {

@@ -14,6 +14,7 @@
         filter: invert(1);
         width: 80px;
         height: 80px;
+        transition: $trans;
 
         .light & {
             filter: invert(0);

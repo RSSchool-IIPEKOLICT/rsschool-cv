@@ -13,9 +13,7 @@ const App: React.FC = () => {
         const saved = JSON.parse(localStorage.getItem('darkMode') || 'true') as boolean
         setDarkMode(saved)
     }, [])
-    useEffect(() => {
-        localStorage.setItem('darkMode', JSON.stringify(darkMode))
-    }, [darkMode])
+    useEffect(() => localStorage.setItem('darkMode', JSON.stringify(darkMode)), [darkMode])
 
     return (
         <div className={(darkMode) ? 'App__wrapper' : 'App__wrapper light'}>
