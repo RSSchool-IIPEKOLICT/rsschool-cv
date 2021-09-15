@@ -8,6 +8,6 @@ export const Footer: React.FC = () =>
         <span>&copy; 2021, all rights reserved.</span>
         <Contacts prefix='footer' />
         <a href='https://rs.school/js/'>
-            <img src={rsLogo} alt="RS School logo" />
+            <img src={rsLogo} alt='RS School logo' />
         </a>
     </footer>

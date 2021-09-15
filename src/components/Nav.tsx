@@ -8,9 +8,9 @@ export const Nav: React.FC = () =>
             <span>Menu</span>
             <svg className='Nav__burger__icon' viewBox='0 0 100 100'>
                 <g>
-                    <rect x="10" y="10" width="80" height="15"/>
-                    <rect x="10" y="42.5" width="80" height="15"/>
-                    <rect x="10" y="75" width="80" height="15"/>
+                    <rect x='10' y='10' width='80' height='15'/>
+                    <rect x='10' y='42.5' width='80' height='15'/>
+                    <rect x='10' y='75' width='80' height='15'/>
                 </g>
             </svg>
         </div>

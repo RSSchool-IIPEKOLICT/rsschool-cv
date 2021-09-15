@@ -1,5 +1,5 @@
 import React from 'react'
-import {CardProps} from "../interfaces/props";
+import {CardProps} from '../interfaces/props'
 import '../styles/Card.scss'
 
 export const Card: React.FC<CardProps> = (props) =>

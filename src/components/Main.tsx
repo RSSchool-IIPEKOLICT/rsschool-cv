@@ -27,11 +27,11 @@ export const Main: React.FC = () =>
             <section id={sections[1]} className='Section'>
                 <h3>{sections[1]}</h3>
                 <p>Example of JS function, which subtracts one list from another and returns the result (codewars):</p>
-                <pre><code className="language-javascript">{examples[0]}</code></pre>
+                <pre><code className='language-javascript'>{examples[0]}</code></pre>
                 <p>JS function to convert RGB to HEX (codewars):</p>
-                <pre><code className="language-javascript">{examples[1]}</code></pre>
+                <pre><code className='language-javascript'>{examples[1]}</code></pre>
                 <p>Kotlin function to check online state in app:</p>
-                <pre><code className="language-kotlin">{examples[2]}</code></pre>
+                <pre><code className='language-kotlin'>{examples[2]}</code></pre>
             </section>
             <section id={sections[2]} className='Section'>
                 <h3>{sections[2]}</h3>
@@ -53,6 +53,13 @@ export const Main: React.FC = () =>
             <section id={sections[5]} className='Section'>
                 <h3>{sections[5]}</h3>
                 <p>My english knowledge level is A2 (Pre-Intermediate).</p>
+                <iframe
+                    src='https://www.youtube.com/embed/S69-yOeuaJ8'
+                    title='YouTube video player'
+                    frameBorder='0'
+                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                    allowFullScreen
+                />
             </section>
         </aside>
     </main>
