@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import '../styles/App.scss'
+import 'highlight.js/styles/github.css'
 import {Nav} from './Nav'
 import {Header} from './Header'
 import {Main} from './Main'

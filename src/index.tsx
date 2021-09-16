@@ -3,12 +3,21 @@ import ReactDOM from 'react-dom'
 import './index.scss'
 import App from './components/App'
 
+import hljs from 'highlight.js/lib/core'
+import javascript from 'highlight.js/lib/languages/javascript'
+import kotlin from 'highlight.js/lib/languages/kotlin'
+
+hljs.registerLanguage('javascript', javascript)
+hljs.registerLanguage('kotlin', kotlin)
+
 ReactDOM.render(
     <React.StrictMode>
         <App />
     </React.StrictMode>,
     document.getElementById('root')
 )
+
+hljs.highlightAll()
 
 console.log(`
 Самопроверка по пунктам:
@@ -76,5 +85,5 @@ GitHub Pages, выполнена самооценка (самооценку ра
 
 Ссылка на исходный код: https://github.com/IIPEKOLICT/rsschool-cv/tree/cv-html-css
 Ссылка на репозиторий: https://github.com/IIPEKOLICT/rsschool-cv
-Ссылка на Pull Request: https://github.com/IIPEKOLICT/rsschool-cv/pull/7
+Ссылка на Pull Request: https://github.com/IIPEKOLICT/rsschool-cv/pull/6
 `)
