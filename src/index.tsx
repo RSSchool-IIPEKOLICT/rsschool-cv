@@ -86,4 +86,7 @@ GitHub Pages, выполнена самооценка (самооценку ра
 Ссылка на исходный код: https://github.com/IIPEKOLICT/rsschool-cv/tree/cv-html-css
 Ссылка на репозиторий: https://github.com/IIPEKOLICT/rsschool-cv
 Ссылка на Pull Request: https://github.com/IIPEKOLICT/rsschool-cv/pull/6
+
+Если плавная прокрутка по якорям не пашет в хроме, то нужно включить smooth scrolling по этой инструкции: 
+https://www.tenforums.com/tutorials/112915-enable-disable-smooth-scrolling-google-chrome.html
 `)

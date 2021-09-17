@@ -52,6 +52,7 @@
 }
 
 pre code.hljs {
+    padding: 0;
     filter: invert(1);
     font-size: .85em;
     transition: $trans;

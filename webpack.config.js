@@ -6,10 +6,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const ForkTsCheckerPlugin = require('fork-ts-checker-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
 
-const fileName = ext => isDev ? `[name].${ext}` : `[name].[hash:8].${ext}`
+const fileName = ext => ext
+    ? isDev ? `[name].${ext}` : `[name].[contenthash:8].${ext}`
+    : isDev ? '[name][ext]' : '[name].[contenthash:8][ext]'
+
 const optimization = () => {
     const optimizationConfig = {
         splitChunks: {
@@ -26,18 +30,76 @@ const optimization = () => {
 }
 
 const cssLoaders = addition => {
-    let defaultLoaders = [MiniCssExtractPlugin.loader, 'css-loader']
-    if (addition) defaultLoaders.push(addition)
+    let loaders = [
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+        {
+            loader: 'postcss-loader',
+            options: {
+                sourceMap: true,
+                postcssOptions: {
+                    plugins: [
+                        'postcss-preset-env',
+                        'css-mqpacker'
+                    ]
+                }
+            }
+        }
+    ]
+    if (addition) loaders.push(addition)
 
-    return defaultLoaders
+    return loaders
+}
+
+const plugins = () => {
+    let array = [
+        new HtmlPlugin({
+            template: join(__dirname, 'public', 'index.html')
+        }),
+        new CleanWebpackPlugin(),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: resolve(__dirname, 'public'),
+                    to: resolve(__dirname, 'docs'),
+                    globOptions: {
+                        ignore: ['**/*.html']
+                    }
+                }
+            ]
+        }),
+        new MiniCssExtractPlugin({
+            linkType: 'text/css',
+            filename: fileName('css'),
+            chunkFilename: fileName('css')
+        }),
+        new ForkTsCheckerPlugin({
+            async: false
+        })
+    ]
+
+    if (isDev) array.push(new ESLintPlugin({
+        extensions: ['js', 'jsx', 'ts', 'tsx']
+    }))
+
+    return array
 }
 
 module.exports = {
+    target: 'web',
     mode: isDev ? 'development' : 'production',
     devServer: {
+        port: 3000,
         hot: true,
+        open: true,
+        compress: true,
         client: {
-            logging: 'error'
+            progress: true,
+            overlay: {
+                errors: true,
+                warnings: false
+            },
+            logging: 'error',
         }
     },
     devtool: isDev ? 'source-map' : undefined,
@@ -47,6 +109,8 @@ module.exports = {
     output: {
         path: resolve(__dirname, 'docs'),
         filename: fileName('js'),
+        chunkFilename: fileName('js'),
+        assetModuleFilename: fileName(),
         clean: true
     },
     optimization: optimization(),
@@ -66,37 +130,16 @@ module.exports = {
                 loader: 'babel-loader',
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/i,
+                test: /\.(?:ico|png|svg|jpe?g|gif|woff(2)?|eot|ttf|otf)$/i,
                 type: 'asset/resource',
             },
             {
-                test: /\.(ico|md)$/,
+                test: /\.(md|mp3|mp4)$/,
                 use: 'file-loader'
             }
         ]
     },
-    plugins: [
-        new HtmlPlugin({
-            inject: true,
-            template: join(__dirname, 'public', 'index.html'),
-            favicon: join(__dirname, 'public', 'favicon.ico')
-        }),
-        new CleanWebpackPlugin(),
-        new CopyPlugin({
-            patterns: [
-                {
-                    from: resolve(__dirname, 'static'),
-                    to: resolve(__dirname, 'docs')
-                }
-            ]
-        }),
-        new MiniCssExtractPlugin({
-            linkType: 'text/css',
-            filename: fileName('css'),
-            chunkFilename: `[id].${fileName('css')}`
-        }),
-        new ForkTsCheckerPlugin()
-    ],
+    plugins: plugins(),
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.scss'],
         alias: {
